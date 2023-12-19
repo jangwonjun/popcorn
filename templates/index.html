@@ -2,23 +2,27 @@
 <head>
     <meta charset="utf-8">
     <title>팝콘번호조회</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css')}} ">
 </head>
 
 <body>
+    <div class="center">
+        <form class="user" method="post" action="/search_code">
+            
+            <div class="form-group">
+                <input name="code" type="text" class="form-control form-control-user"
+                id="code" placeholder="쿠폰번호입력">
+            </div>
 
-    <form class="user" method="post" action="/search_code">
-        <div class="form-group">
-            <input name="code" type="text" class="form-control form-control-user"
-            id="code" placeholder="쿠폰번호입력">
-        </div>
+            <button type="submit" class="btn btn-primary btn-user btn-block">
+                조회하기
+            </button>
+        </form>
+    
+        {% if next %}
+            <h3 class="menu">메뉴 : {{next}}</h3>
+        {% endif %}
 
-        <button type="submit" class="btn btn-primary btn-user btn-block">
-            조회하기
-        </button>
-    </form>
-
-        <h3>메뉴 : {{next}}</h3>
-
-        <h4>상태 : {{state}}</h4>
-
+        <h4 class="postive_state">쿠폰상태 : {{state}}</h4>
+    </div>
 </body>

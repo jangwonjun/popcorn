@@ -14,7 +14,7 @@ def home():
     )
 
     cursor = conn.cursor()
-
+    
     barcode = '123456789'
     sql = "INSERT INTO popcorn_user (name, phone_number, bank, menu, cord) VALUES (%s, %s, %s, %s, %s)"
     values = ('장원준', '01020359827', '국민은행', 'menu_value', barcode)
@@ -61,7 +61,6 @@ def delete_code():
     cursor = conn.cursor()
 
     code_num = session.get('code')
-
 
     cursor.execute(sql_2, (code_num,))
 
