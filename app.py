@@ -31,6 +31,7 @@ def search_code():
     
     print(code)
 
+
     session['code'] = code
 
     conn = pymysql.connect(
@@ -47,12 +48,16 @@ def search_code():
 
     conn.close()
 
-    return render_template('index.html',next=results)
+    if results:
+        state = "정상쿠폰입니다."
 
-@app.route('/delete_code')
+    else:
+        state = "이미사용한 쿠폰입니다."
+
+    return render_template('index.html',next=results,state=state)
+
+@app.route('/delete_code',methods=['GET','POST'])
 def delete_code():
-
-    sql_2 = "DELETE FROM popcorn_user WHERE cord = %s"
 
     conn = pymysql.connect(
     host=SQL.HOST, port=SQL.PORT, user=SQL.ID, passwd=SQL.PASSWORD, db=SQL.DB_NAME, charset='utf8'
@@ -62,7 +67,13 @@ def delete_code():
 
     code_num = session.get('code')
 
-    cursor.execute(sql_2, (code_num,))
+    query = f"""
+    UPDATE popcorn_user
+    SET cord = 0
+    WHERE cord = {code_num};
+    """
+
+    cursor.execute(query)
 
     conn.commit()
 

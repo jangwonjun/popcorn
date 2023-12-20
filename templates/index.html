@@ -18,11 +18,19 @@
                 조회하기
             </button>
         </form>
+
+        
     
         {% if next %}
             <h3 class="menu">메뉴 : {{next}}</h3>
         {% endif %}
 
         <h4 class="postive_state">쿠폰상태 : {{state}}</h4>
+
+        <form class="user" method="post" action="/delete_code">
+            <button type="submit" class="btn btn-primary btn-user btn-block">
+                쿠폰사용완료
+            </button>
+        </form>
     </div>
 </body>
