@@ -24,7 +24,7 @@
   <h4>개인정보로 인해서 모든 주문자분들의 정보를 보여드릴 수는 없지만, 1번 예시처럼 DB를 구성하였습니다.</h4>
 </div>
 
-<div><h2>바코드 생성하기 😱</h2>
+<div><h2>바코드 생성하기 😱</h2>
   <h4>생각지도 못한 부분에서 난관에 봉착하였습니다.</h4>
   <h4>사실 파이썬에 python-barcode라는 pip가 있습니다만, 이것이 문제를 일으키던군요...</h4>
   <h4>import를 했지만, 라이브러리가 없다고 계속 출력되는 문제가 발생하였습니다.</h4>
@@ -34,14 +34,13 @@
   <h4>이런식으로, 사전예약 하신 28분의 바코드를 생성하였습니다!</h4>
 </div>
 
-<div><h2>바코드 인식 프로그램 제작하기 🫡</h2>
-  <img width="1257" alt="스크린샷 2023-12-26 오후 10 52 33" src="https://github.com/jangwonjun/sdb_message/assets/41234293/140d68e4-e052-4e18-805e-f0df558731cf">
-  <h5>http://dev.activejang.kro.kr/search_code</h5>
+<div><h2>바코드 인식 프로그램 제작하기 🫡</h2>
+  <img width="1257" alt="스크린샷 2023-12-26 오후 10 52 33" src="https://github.com/jangwonjun/sdb_message/assets/41234293/140d68e4-e052-4e18-805e-f0df558731cf">                             <h5>http://dev.activejang.kro.kr/search_code</h5>
   <h4>위에 링크에서 조회가 가능합니다!</h4>
   <h4>또한 인식후, 바코드 삭제하기를 눌러서 사용완료한 바코드라고 처리할 수 있습니다.</h4>
 </div>
 
-<div><h2>후기 - 성공적으로 마침</h2>
+<div><h2>후기 - 성공적으로 마침</h2>
   <img src='https://github.com/jangwonjun/sdb_message/assets/41234293/2900b370-2a34-4b87-9aac-35fbc08922c5'>
   <video width=300px src=https://github.com/jangwonjun/sdb_message/assets/41234293/67a30f21-ee7a-4089-8bce-5e69afc95108></video>
   <h4>너무 시간이 적어서, UI/UX는 개나줘버리고 만든것이 없지 않아 있지만, 그걸 가만하면 잘 만들어진것 같은 프로그램인것 같습니다.</h4>
