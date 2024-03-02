@@ -17,7 +17,7 @@ def home():
     
     barcode = '123456789'
     sql = "INSERT INTO popcorn_user (name, phone_number, bank, menu, cord) VALUES (%s, %s, %s, %s, %s)"
-    values = ('장원준', '01020359827', '국민은행', 'menu_value', barcode)
+    values = ('장*준', '01033333333', '국민은행', 'menu_value', barcode)
     cursor.execute(sql, values)
     conn.commit()
 
